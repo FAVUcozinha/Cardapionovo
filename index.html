@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio - FAVU Cozinha Afetiva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <nav id="side-menu" class="side-menu">
+        <button id="close-menu-btn" class="close-menu-btn">&times;</button>
+        <div class="side-menu-content">
+            <div class="menu-logo-container">
+                <img src="images/favu.png" alt="Logo FAVU" class="menu-logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" id="menu-quem-somos" class="menu-link">QUEM SOMOS</a></li>
+                <li><a href="https://favucozinha.github.io/Favu/" target="_blank" id="menu-inicial-link" class="menu-link">MENU INICIAL</a></li>
+            </ul>
+            <div class="menu-socials">
+                <a href="https://www.instagram.com/favucozinha/" target="_blank" class="menu-social-link">
+                    <i class="fab fa-instagram"></i> Nos siga no Instagram
+                </a>
+                <a href="http://wa.me/558195256641" target="_blank" class="menu-social-link">
+                    <i class="fab fa-whatsapp"></i> Falar com o Favu
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header com Botão Menu - Fora do container -->
+    <header id="header">
+        <div class="header-container-full">
+            <button id="mobile-menu-btn" class="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Navegação de Categorias (Fixed no topo) -->
+    <nav id="categorias-nav" class="categorias-nav">
+        <div class="categorias-nav-wrapper">
+            <div id="categorias-horizontal" class="categorias-draggable">
+                <a href="#grupo-bolo-tradicional" class="categoria-btn" data-target="grupo-bolo-tradicional">Bolos Tradicionais</a>
+                <a href="#grupo-bolo-especial" class="categoria-btn" data-target="grupo-bolo-especial">Bolos Especiais</a>
+                <a href="#grupo-doces" class="categoria-btn" data-target="grupo-doces">Doces</a>
+                <a href="#grupo-cookies" class="categoria-btn" data-target="grupo-cookies">Cookies</a>
+                <a href="#grupo-salfri" class="categoria-btn" data-target="grupo-salfri">Salgados Fritos</a>
+                <a href="#grupo-salgado-forno" class="categoria-btn" data-target="grupo-salgado-forno">Salgados Forno</a>
+                <a href="#grupo-salgado-vegetariano" class="categoria-btn" data-target="grupo-salgado-vegetariano">Salgados Vegetarianos</a>
+                <a href="#grupo-prato-salgado" class="categoria-btn" data-target="grupo-prato-salgado">Pratos Salgados</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div id="sticky-nav-container" style="display: none;">
+                <a href="#grupo-bolo-tradicional" data-target="grupo-bolo-tradicional" data-img="img-bolo-tradicional">Bolos Tradicionais</a>
+                <a href="#grupo-bolo-especial" data-target="grupo-bolo-especial" data-img="img-bolo-especial">Bolos Especiais</a>
+                <a href="#grupo-doces" data-target="grupo-doces" data-img="img-doces">Doces</a>
+                <a href="#grupo-cookies" data-target="grupo-cookies" data-img="img-cookies">Cookies</a>
+                <a href="#grupo-salfri" data-target="grupo-salfri" data-img="img-salfri">Salgados Fritos</a>
+                <a href="#grupo-salgado-forno" data-target="grupo-salgado-forno" data-img="img-salgado-forno">Salgados Forno</a>
+                <a href="#grupo-salgado-vegetariano" data-target="grupo-salgado-vegetariano" data-img="img-salgado-vegetariano">Salgados Vegetarianos</a>
+                <a href="#grupo-prato-salgado" data-target="grupo-prato-salgado" data-img="img-prato-salgado">Pratos Salgados</a>
+            </div>
+        </div>
+        
+        <main class="menu-content">
+            
+            <div class="categoria-group active-group" id="grupo-bolo-tradicional">
+                <h2 class="categoria-title">Bolos Tradicionais</h2>
+                <div class="table-card">
+                    <table id="tabela-bolo-tradicional">
+                        <caption>Bolos Tradicionais</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">Tam.</span><span class="th-desktop">Tamanho</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-bolo-especial">
+                <h2 class="categoria-title">Bolos Especiais</h2>
+                <div class="table-card">
+                    <table id="tabela-bolo-especial">
+                        <caption>Bolos Especiais</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">Tam.</span><span class="th-desktop">Tamanho</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-doces">
+                <h2 class="categoria-title">Doces</h2>
+                <div class="table-card">
+                    <table id="tabela-doces">
+                        <caption>Doces</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">MÍN.</span><span class="th-desktop">Mínimo</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-cookies">
+                <h2 class="categoria-title">Cookies</h2>
+
+                <div class="table-card">
+                    <table id="tabela-cookies">
+                        <caption>Cookies Tradicionais</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <div class="info-box">
+                        <p>Os cookies Tradicional, Red Velvet e Black possuem quantidade mínima de 3 unidades no total.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-salfri">
+                <h2 class="categoria-title">Salgados Fritos</h2>
+                <div class="table-card">
+                    <table id="tabela-salfri">
+                        <caption>Salgados Fritos</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">MÍN.</span><span class="th-desktop">Mínimo</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-salgado-forno">
+                <h2 class="categoria-title">Salgados Forno</h2>
+                <div class="table-card">
+                    <table id="tabela-salgado-forno">
+                        <caption>Salgados Forno</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">MÍN.</span><span class="th-desktop">Mínimo</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="categoria-group" id="grupo-salgado-vegetariano">
+                <h2 class="categoria-title">Salgados Vegetarianos</h2>
+                <div class="table-card">
+                    <table id="tabela-salgado-vegetariano">
+                        <caption>Salgados Vegetarianos</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">MÍN.</span><span class="th-desktop">Mínimo</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="categoria-group" id="grupo-prato-salgado">
+                <h2 class="categoria-title">Pratos Salgados</h2>
+                <div class="table-card">
+                    <table id="tabela-prato-salgado">
+                        <caption>Pratos Salgados</caption>
+                        <thead>
+                            <tr>
+                                <th>ITEM</th>
+                                <th><span class="th-mobile">Tam.</span><span class="th-desktop">Tamanho</span></th>
+                                <th><span class="th-mobile">UNID.</span><span class="th-desktop">Unidade</span></th>
+                                <th><span class="th-mobile">QTD</span><span class="th-desktop">Quantidade</span></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </main>
+        
+        <div id="popup-resumo" class="popup">
+            <div class="popup-conteudo">
+                <span class="fechar" onclick="fecharResumoPopup()">&times;</span>
+                <h2 class="font-display">Resumo do Pedido</h2>
+                
+                <div id="popup-resumo-itens" class="resumo-itens"></div>
+                
+                <div id="cupom-container">
+                    <strong>CUPOM DE DESCONTO</strong>
+                    <div id="cupom-input-group">
+                        <input type="text" id="cupom-input" placeholder="CÓDIGO">
+                        <button id="apply-cupom-btn" onclick="aplicarCupom()">APLICAR</button>
+                    </div>
+                    <div id="cupom-message" class="cupom-message"></div>
+                </div>
+                <div id="popup-resumo-total" class="resumo-total font-display"></div>
+                
+                <div id="fazer-pedido-button-container"></div>
+            </div>
+        </div>
+        
+        <div id="popup-pedido" class="popup">
+            <div class="popup-conteudo">
+                <span class="fechar" onclick="fecharPopup()">&times;</span>
+                <div class="popup-inner-scroll">
+                    <h2 class="font-display">Informações do Pedido</h2>
+                    <form id="form-pedido">
+                    <label for="nome">NOME:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome Completo" required>
+
+                    <label for="telefone">NÚMERO (WHATSAPP):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(DDD) 9XXXX-XXXX" required>
+
+                    <label for="data">DATA DA ENTREGA:</label>
+                    <input type="date" id="data" name="data" required>
+
+                    <label for="horario">HORÁRIO DA ENTREGA:</label>
+                    <input type="time" id="horario" name="horario" required>
+                    
+                    <label for="pagamento">FORMA DE PAGAMENTO:</label>
+                    <select id="pagamento" name="pagamento" required>
+                        <option value="Pix">Pix</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                        <option value="Cartão">Cartão</option>
+                    </select>
+
+                    <label for="observacoes">OBSERVAÇÕES:</label>
+                    <textarea id="observacoes" name="Observacoes" placeholder="Ex: Retirar cebola, alergias, etc." rows="3"></textarea>
+
+                    </form>
+                </div>
+                <div class="popup-footer">
+                    <div class="popup-footer-actions-top">
+                        <button type="button" class="btn-secondary" onclick="fecharPopup()">Voltar</button>
+                        <button type="button" class="btn-secondary" onclick="editarPedido()">Editar Pedido</button>
+                    </div>
+                    <div class="popup-footer-actions-bottom">
+                        <button type="button" class="btn-primary-large" onclick="confirmarPedido()">Confirmar Pedido</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button id="fixed-summary" onclick="abrirResumoPopup()">
+            <div class="summary-content">
+                <div id="summary-text">
+                    <span id="summary-total">R$: 0,00</span>
+                    <span id="summary-item-count">/ 0 itens</span>
+                </div>
+                <div id="summary-button">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </button>
+
+        </div>
+    </div>
+
+    <!-- Footer - Fora do container -->
+    <footer>
+        <div class="footer-container-center">
+            <img src="images/logoroda.png" alt="FAVU Rodapé" class="footer-logo">
+            <div class="desktop-signature">
+                <img src="images/BS.png" alt="Icone">
+                <span>FAVU Cozinha Afetiva</span>
+            </div>
+            <p class="copy">&copy; 2026 Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Quem Somos -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <div class="close-btn-wrapper" onclick="closeAboutModal()">
+                <i class="fa-solid fa-xmark close-btn-icon"></i>
+            </div>
+            <div class="modal-body-scroll">
+                <div class="modal-body">
+                    <img src="images/BS.png" alt="História FAVU" class="modal-img">
+                    <div class="font-cocogoose modal-text">
+                        <p>Inspirada nas receitas e lembranças de família, juntamos a tradição e a criatividade para criar pratos, bolos e salgados sob encomenda, uma coisa melhor que a outra.</p>
+                        <p>Tudo artesanal, feito a quatro mãos, de <strong>mãe para filho</strong>, com ingredientes selecionados e um toque especial que só a FAVU tem!</p>
+                        <p class="highlight">Faça sua encomenda e vamos transformar seus momentos especiais em inesquecíveis!</p>
+                    </div>
+                    <a href="http://wa.me/558195256641" target="_blank" class="btn-primary full-width">Falar com o Favu</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Imagem do Item -->
+    <div id="popup-natal">
+        <div id="popup-natal-conteudo">
+            <span class="fechar" onclick="fecharPopupNatal()">&times;</span>
+            <h2 class="font-display">PARABÉNS FAVU! 🎂</h2>
+            <p>O natal está chegando e com ele o primeiro aniversário da FAVU Cozinha Afetiva.</p>
+            <p>Temos um presente pra você:</p>
+            
+            <ul>
+                <li>
+                    Pedidos acima de R$ 150,00
+                    <span> Ganham 3 FAVU Cookies 🍪</span>
+                </li>
+                <li>
+                    Pedidos acima de R$ 300,00
+                    <span> Ganham os 3 Cookies 🍪</span>
+                    <span> + 10% de desconto no próximo pedido! 🎁</span>
+                </li>
+            </ul>
+            
+            <p class="promo-date">Promoção disponível até 20/12!</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/pt.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
